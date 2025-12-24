@@ -1,0 +1,26 @@
+name: Github Actions
+
+on:
+  push:
+    paths:
+      - '.github/workflows/mamatha.yaml'
+     
+
+jobs:
+    file-operations:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Create a file
+          run: echo "GITHUB ACTIONS -PRACTICE" > devops.txt
+
+        - name: Display file content
+          run: cat devops.txt
+        
+        - name: List files in the directory
+          run: ls -lrth
+
+        - name: present working directory
+          run: pwd
+
+        - name: Display Date and Time
+          run: date
