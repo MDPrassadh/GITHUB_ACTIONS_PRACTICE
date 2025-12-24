@@ -1,10 +1,14 @@
-name: Testing WF  
-on: push
+name: PHONEPAY
+
+on:
+  push
+
 jobs:
-    test-job:
-         runs-on: ubuntu-latest
-         steps:
-           - name: Hello Display
-             run: echo "Hello INFO"
-           - name: Date Display
-             run: date
+  prod-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ------------
+        run: echo "HI____"
+
+      - name: cal
+        run: cal
