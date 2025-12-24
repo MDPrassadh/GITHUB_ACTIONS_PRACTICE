@@ -1,0 +1,11 @@
+name: prod workflow
+on: push
+jobs:
+    test-job:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Hello
+          run: echo " GITHUB ACTIONS"
+        
+        - name: ls
