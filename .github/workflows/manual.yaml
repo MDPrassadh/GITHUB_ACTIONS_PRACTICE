@@ -21,3 +21,4 @@ jobs:
 
       - name: Display Date and Time
         run: date
+        run: calendar
