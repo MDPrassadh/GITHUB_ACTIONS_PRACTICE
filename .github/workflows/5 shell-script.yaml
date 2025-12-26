@@ -15,6 +15,9 @@ jobs:
         
         - name: listing files in the directory
           run: ls -lrth
+        
+        - name: Give execute permission to shell script
+          run: chmod +x uptime.sh
 
         - name: Run Shell Script
           run: ./uptime.sh
