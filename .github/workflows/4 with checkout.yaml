@@ -1,0 +1,20 @@
+name: Validating Workflow Checkout  
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+    validate-without-checkout:
+        name: Validate Checkout Stage
+        runs-on: ubuntu-latest
+    
+        steps:
+        - name: Attempt to list files without checkout
+          run: ls -la
+    
+        - name: Attempt to display working directory
+          run: pwd
+    
+        - name: Display file content
+          run: cat devops.txt 
