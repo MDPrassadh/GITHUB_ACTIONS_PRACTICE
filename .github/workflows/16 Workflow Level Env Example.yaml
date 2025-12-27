@@ -1,0 +1,33 @@
+name: Workflow Level Env Variable Example
+
+on:
+  workflow_dispatch:  
+  
+env:
+  CITY: "HYD"
+  COUNTRY: "INDIA"
+  STATE: "TELANGANA"
+  TEACHER: "PRASSADH"
+jobs:
+
+    job1:
+        runs-on: ubuntu-latest
+
+            
+        steps:
+          - name: Set workflow-level variable
+            run: |
+             echo "My city is $CITY"
+             echo "My country is $COUNTRY"
+             echo "My state is $STATE"
+             echo "My teacher is $TEACHER"
+        
+          - name: Use workflow-level variable
+            run: echo "My city is ${CITY} and state of ${STATE} in ${COUNTRY}. My teacher is ${TEACHER}"
+    job2:
+        runs-on: ubuntu-latest
+
+            
+        steps:
+          - name: Use workflow-level variable in job2
+            run: echo "In job2, My city is ${CITY} and state of ${STATE} in ${COUNTRY}. My teacher is ${TEACHER}" 
